@@ -1,0 +1,130 @@
+  /* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.1); /* Background semi-transparan */
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1 i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px; /* Ukuran ikon terminal */
+  padding: 10px; /* Ruang di sekitar ikon */
+  background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang */
+  border-radius: 50%; /* Bentuk bulat */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi saat hover */
+}
+
+h1 i:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Warna latar belakang saat hover */
+  transform: translateY(-50%) scale(1.1); /* Perbesar ikon saat hover */
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.countdown-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.countdown-item span:first-child {
+  font-size: 48px;
+}
+
+.countdown-item span:last-child {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Command input container */
+#command-input-container {
+  margin-top: 20px;
+}
+
+#command-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+#submit-command, #cancel-command {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#submit-command {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#cancel-command {
+  background-color: #f44336;
+  color: white;
+  margin-left: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

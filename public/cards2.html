@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem Panel Code</title>
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <!-- SweetAlert2 untuk tampilan notifikasi -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="gaya/stylee.css">
+    <script src="teks/scriptt.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Redeem Your Panel Code <i class="fas fa-gift"></i></h1>
+    <input type="text" id="redeemCode" placeholder="Enter your code here">
+    <button onclick="redeemCode()">Redeem</button>
+    <div class="panel-info hidden" id="panelInfo">
+        <h2>Panel Specifications <i class="fas fa-info-circle"></i></h2>
+        <p><span>RAM:</span> <span id="ram"></span> GB</p>
+        <p><span>Disk:</span> <span id="disk"></span> GB</p>
+        <p><span>CPU:</span> <span id="cpu"></span>%</p>
+        <a href="#" class="cta-button" id="ctaButton">Claim via WhatsApp</a>
+    </div>
+    <div class="settings-container">
+        <i id="settings-icon" class="bi bi-terminal"></i>
+        <div id="command-input-container" class="hidden">
+            <input type="text" id="command-input" placeholder="Input Command. Example: To page 2">
+            <button id="submit-command">Go</button>
+            <button id="cancel-command">X</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
+

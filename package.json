@@ -1,0 +1,16 @@
+{
+  "name": "redeem-code-system",
+  "version": "1.0.0",
+  "description": "A simple redeem code system using Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun Sosial Media Kami</title>
+    <link rel="stylesheet" href="gaya/style.css">
+    <script src="teks/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="social-media-container">
+        <h1>Akun Sosial Media Kami</h1>
+        <div id="notification" class="notification"></div>
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="bi bi-moon"></i>
+        </button>
+        <div id="typing-text">Tetap Terhubung dengan Kami di Platform Sosial Media</div>
+        <div class="settings-container">
+            <i id="settings-icon" class="bi bi-terminal"></i>
+            <div id="command-input-container" class="hidden">
+                <input type="text" id="command-input" placeholder="Input Command.example:To page 2">
+                <button id="submit-command">Go</button>
+                <button id="cancel-command">X</button>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/dreamliner21" class="social-icon" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://twitter.com/yanstian" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/initiaann_0705" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/paulchristi" class="social-icon" target="_blank"><i class="bi bi-tiktok"></i></a>
+            <a href="https://wa.me/6285965981742" class="social-icon" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <button id="music-control" class="music-control" class="social-icon"><i class="bi bi-play"></i></button>
+        </div>
+    </div>
+    <div class="music-container">
+        <audio id="background-music" src="https://k.top4top.io/m_3107ip6vh2.mp3" loop></audio>
+    </div>
+</body>
+</html>

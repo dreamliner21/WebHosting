@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.intro-section {
+    background: linear-gradient(135deg, #0073e6, #00aaff);
+    color: white;
+    padding: 8vh 5vw;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s forwards;
+    position: relative; /* Menambahkan posisi relatif untuk z-index bekerja */
+    z-index: 1; /* Mengatur z-index agar intro-section ada di atas popup */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: -400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-content .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.popup-content .close-button:hover {
+    color: #555;
+}
+
+@keyframes slideIn {
+    from {
+        right: -400px;
+        opacity: 0;
+    }
+    to {
+        right: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: 20px;
+        opacity: 1;
+    }
+    to {
+        right: -400px;
+        opacity: 0;
+    }
+}
+
+.intro-section {
+    background: linear-gradient(135deg, #0073e6, #00aaff);
+    color: white;
+    padding: 8vh 5vw;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro-section h1 {
+    margin: 0;
+    font-size: 8vw;
+    animation: fadeInText 2s forwards;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.intro-section p {
+    margin: 2vh 0 0 0;
+    font-size: 5vw;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2vh;
+    padding: 2.5vh 5vw;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 4vw;
+}
+
+.cta-button:hover {
+    background-color: #ff4500;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    margin-top: 5vh;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    padding: 4vh 3vw;
+    border-radius: 2vw;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Outline box-shadow */
+    width: 80vw;
+    text-align: center;
+    transform: translateY(5vh);
+    opacity: 0;
+    animation: slideUp 0.5s forwards;
+    position: relative; /* Add position relative for pseudo-element */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -1.5vw; /* Adjust outline position */
+    left: -1.5vw; /* Adjust outline position */
+    right: -1.5vw; /* Adjust outline position */
+    bottom: -1.5vw; /* Adjust outline position */
+    border-radius: 2vw;
+    border: 3px solid #0073e6; /* Outline color */
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1; /* Show outline on hover */
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.typing {
+  font-size: 4vw;
+}
+.typing::after {
+    content: '';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.order-section {
+    margin-top: 5vh;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.highlight {
+    color: #ff6347;
+    font-weight: bold;
+    animation: highlightBlink 1s infinite;
+}
+
+@keyframes highlightBlink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link .card {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .intro-section {
+        padding: 6vh 10vw; /* Adjust padding for larger screens */
+    }
+    
+    .intro-section h1 {
+        font-size: 3vw; /* Adjust font size for larger screens */
+    }
+    
+    .intro-section p {
+        font-size: 5vw; /* Adjust font size for larger screens */
+    }
+    
+    .cta-button {
+        padding: 1.5vh 4vw; /* Adjust padding for larger screens */
+        font-size: 3vw; /* Adjust font size for larger screens */
+    }
+    
+    .container {
+        gap: 6vh; /* Adjust gap between cards for larger screens */
+    }
+    
+    .card {
+        padding: 5vh 4vw; /* Adjust padding for larger screens */
+        border-radius: 3vw; /* Adjust border radius for larger screens */
+        width: 60vw; /* Adjust width for larger screens */
+        transform: translateY(8vh); /* Adjust translateY for larger screens */
+    }
+    .card h2 {
+      font-size: 4vw;
+    }
+    .card::before {
+        top: -2vw; /* Adjust outline position for larger screens */
+        left: -2vw; /* Adjust outline position for larger screens */
+        right: -2vw; /* Adjust outline position for larger screens */
+        bottom: -2vw; /* Adjust outline position for larger screens */
+        border-width: 4px; /* Adjust border width for larger screens */
+    }
+    
+    .order-section {
+        font-size: 3vw; /* Adjust font size for larger screens */
+    }
+}
