@@ -11,7 +11,7 @@
 <script src="teks/scripttt.js" defer></script>
 </head>
 <body>
-<div class="container">
+<div id="countdown-container" class="container">
   <h1>Countdown Timer <i id="settings-icon" class="fa-solid fa-terminal"></i>
             <div id="command-input-container" class="hidden">
                 <input type="text" id="command-input" placeholder="give a command for switch">
@@ -37,6 +37,12 @@
       <span>Seconds</span>
     </div>
   </div>
+</div>
+
+<!-- Konten yang akan ditampilkan setelah countdown selesai -->
+<div id="main-content" class="container hidden">
+  <h1>Selamat! Waktunya telah tiba.</h1>
+  <p>Ini adalah konten sebenarnya yang muncul setelah countdown selesai.</p>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="script.js"></script>
