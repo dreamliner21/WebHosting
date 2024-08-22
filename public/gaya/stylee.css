@@ -1,10 +1,13 @@
 :root {
-            --primary-color: #000;
-            --secondary-color: #000;
-            --text-color: #333;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
+    --primary-color: #0066cc;
+    --secondary-color: #25D366;
+    --text-color: #333;
+    --button-background: #0066cc;
+    --button-hover: #005bb5;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
             background-image: url('https://btch.pages.dev/file/dc3534c1bc654682173fb.jpg');
             background-repeat: no-repeat;
             background-position: center center;
@@ -15,177 +18,175 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-        }
+}
 
-        .container {
-            background: rgba(255, 255, 255, 0.4);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            text-align: center;
-            width: 100%;
-            max-width: 500px;
-            animation: fadeIn 1s ease-in-out;
-        }
+.container {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 1s ease-in-out;
+    background-attachment: fixed;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        input[type="text"] {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            box-sizing: border-box;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
+p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: var(--text-color);
+}
 
-        input[type="text"]:focus {
-            outline: none;
-            border-color: #0066cc;
-            box-shadow: 0 0 8px rgba(0, 102, 204, 0.3);
-        }
+p span {
+    font-weight: 600;
+    color: var(--primary-color);
+}
 
-        input[type="text"]::placeholder {
-            color: #aaa;
-        }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        button {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            background-color: #0066cc;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
+li {
+    font-size: 16px;
+    margin: 10px 0;
+    color: var(--text-color);
+}
 
-        button:hover {
-            background-color: #005bb5;
-        }
+li::before {
+    content: '\f00c'; /* Ikon ceklis dari FontAwesome */
+    font-family: 'FontAwesome';
+    color: var(--primary-color);
+    margin-right: 10px;
+}
 
-        .panel-info {
-            display: none;
-            margin-top: 20px;
-            text-align: left;
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
-            animation: slideIn 1s ease-in-out;
-        }
+.cta-button {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+.cta-button:hover {
+    background-color: #1ebf5b;
+    transform: translateY(-2px);
+}
 
-        .panel-info p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
+/* Settings icon styling */
+.settings-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 
-        .panel-info p span {
-            font-weight: bold;
-            color: #0066cc;
-        }
+#settings-icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s, transform 0.3s;
+}
 
-        .cta-button {
-            margin-top: 20px;
-            font-size: 16px;
-            background-color: #25D366;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
+#settings-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
 
-        .cta-button:hover {
-            background-color: #128C7E;
-        }
+#command-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+}
 
-        /* Settings icon styling */
-        .settings-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
+#command-input-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
-        #settings-icon {
-            margin: 1.5rem 0;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #000;
-            transition: color 0.3s, transform 0.3s;
-        }
+#command-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 220px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
 
-        #settings-icon:hover {
-            color: rgba(0, 0, 0, 0.4);
-            transform: scale(1.1);
-        }
+#command-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
 
-        #command-input-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+#command-input::placeholder {
+    color: #bbb;
+}
 
-        #command-input-container.hidden {
-            display: none;
-        }
+#submit-command, #cancel-command {
+    padding: 10px 20px;
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    margin: 5px 0;
+}
 
-        #command-input {
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid;
-            width: 200px;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
+#submit-command:hover, #cancel-command:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+}
 
-        #command-input:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 5px var(--secondary-color);
-        }
+/* Modern and minimal screenshot styling */
+.screenshot-container {
+    margin-top: 5px;
+    text-align: center;
+}
 
-        #command-input::placeholder {
-            color: var(--text-color);
-            opacity: 0.7;
-        }
+.screenshot-container img {
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
 
-        #submit-command, #cancel-command {
-            padding: 10px 20px;
-            background-color: var(--button-background);
-            border: none;
-            border-radius: 5px;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-            font-size: 1rem;
-            margin: 5px 0;
-        }
+.screenshot-container img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
 
-        #submit-command:hover, #cancel-command:hover {
-            background-color: var(--button-hover);
-            transform: scale(1.05);
-        }
+.screenshot-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
