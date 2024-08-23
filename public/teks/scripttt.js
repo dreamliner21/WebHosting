@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     videoBackground.src = 'https://f.top4top.io/m_3156sdx3h0.mp4';
     videoBackground.autoplay = true;
     videoBackground.loop = true;
-    videoBackground.muted = false; // Optional: Mematikan suara video
+    videoBackground.muted = true; // Optional: Mematikan suara video
 
     // Gaya untuk video agar menjadi background
     videoBackground.style.position = 'fixed';
