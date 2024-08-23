@@ -1,50 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Countdown Timer</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-U7w5L35C4NYcfysbYpUGpGb9O2lVWjNw+ULm1gL5Dyv8lRrbjp7tysuvT1jnXOt06tJOz7zll9LC0VP32e7B7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="gaya/styleee.css">
-<script src="teks/scripttt.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <!-- Font dan Ikon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-U7w5L35C4NYcfysbYpUGpGb9O2lVWjNw+ULm1gL5Dyv8lRrbjp7tysuvT1jnXOt06tJOz7zll9LC0VP32e7B7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="gaya/styleee.css">
+    <script src="teks/scripttt.js" defer></script>
 </head>
 <body>
-<div id="countdown-container" class="container">
-  <h1>Countdown Timer <i id="settings-icon" class="fa-solid fa-terminal"></i>
-            <div id="command-input-container" class="hidden">
-                <input type="text" id="command-input" placeholder="give a command for switch">
-                <button id="submit-command">Go</button>
-                <button id="cancel-command">X</button>
-            </div>
-            </h1>
-  <div id="countdown">
-    <div class="countdown-item">
-      <span id="days">00</span>
-      <span>Days</span>
-    </div>
-    <div class="countdown-item">
-      <span id="hours">00</span>
-      <span>Hours</span>
-    </div>
-    <div class="countdown-item">
-      <span id="minutes">00</span>
-      <span>Minutes</span>
-    </div>
-    <div class="countdown-item">
-      <span id="seconds">00</span>
-      <span>Seconds</span>
-    </div>
-  </div>
-</div>
 
-<!-- Konten yang akan ditampilkan setelah countdown selesai -->
-<div id="main-content" class="container hidden">
-  <h1>Selamat! Waktunya telah tiba.</h1>
-  <p>Ini adalah konten sebenarnya yang muncul setelah countdown selesai.</p>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="script.js"></script>
+    <!-- Profile Card -->
+    <div class="container">
+        <div id="profile-card">
+            <img src="https://telegra.ph/file/06d63c50e1a4ac0133efb.jpg" alt="Profile Picture" class="profile-img">
+            <div class="profile-info">
+                <div id="typing-text">Info Owner</div>
+                <p class="name">Name: Paul</p>
+                <p class="from">From: Semarang</p>
+                <p class="bio">Cuma Pemula Yang Ingin Menguasai Bumi.</p>
+            </div>
+        </div>
+
+        <div class="details">
+            <p>
+                <i class="bi bi-envelope-fill"></i> Email:
+                <a href="mailto:anjaypaull153@gmail.com" class="btn">Kirim Email</a>
+            </p>
+            <p>
+                <i class="bi bi-instagram"></i> Instagram:
+                <a href="https://www.instagram.com/initiaann_0705" target="_blank" class="btn">Kunjungi</a>
+            </p>
+            <p>
+                <i class="bi bi-github"></i> GitHub:
+                <a href="https://github.com/dreamliner21" target="_blank" class="btn">Lihat Profil</a>
+            </p>
+            <p>
+                <i class="bi bi-tiktok"></i> TikTok:
+                <a href="https://www.tiktok.com/@paulchristi21" target="_blank" class="btn">Lihat Profil</a>
+            </p>
+        </div>
+
+        <div class="settings-container">
+            <i id="settings-icon" class="bi bi-terminal"></i>
+            <div class="theme-toggle">
+        <i id="theme-icon" class="bi bi-brightness-high-fill"></i>
+    </div>
+        </div>
+        
+        <!-- Command Input Container -->
+        <div id="command-input-container" class="hidden">
+            <input type="text" id="command-input" placeholder="Enter your command...">
+            <button id="submit-command">Submit</button>
+            <button id="cancel-command">Cancel</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 </html>
